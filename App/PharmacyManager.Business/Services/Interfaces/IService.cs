@@ -1,6 +1,6 @@
-﻿namespace PharmacyManager.Data.Repositories.Interfaces
+﻿namespace PharmacyManager.Business.Services.Interfaces
 {
-    public interface IRepository<T>
+    public interface IService<T>
     {
         T GetById(int id);
 

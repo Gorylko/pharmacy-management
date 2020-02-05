@@ -1,10 +1,15 @@
-﻿namespace PharmacyManager.Data.Repositories.Realization
-{
-    using PharmacyManager.Data.Repositories.Interfaces;
-    using PharmacyManager.Shared.Entities;
+﻿using PharmacyManager.Business.Services.Interfaces;
+using PharmacyManager.Shared.Entities;
 
-    public class MedicamentRepository : IUserRepository
+namespace PharmacyManager.Business.Services.Realization
+{
+    public class MedicamentService : IMedicamentService
     {
+        public MedicamentService()
+        {
+
+        }
+
         public void Delete(int id)
         {
             throw new System.NotImplementedException();

@@ -1,6 +1,8 @@
-﻿namespace PharmacyManager.Data.Repositories.Interfaces
+﻿using PharmacyManager.Shared.Entities;
+
+namespace PharmacyManager.Data.Repositories.Interfaces
 {
-    public interface IMedicamentRepository
+    public interface IUserRepository : IRepository<Medicament>
     {
     }
 }
