@@ -46,6 +46,11 @@
     <Compile Include="Repositories\Interfaces\IRepository.cs" />
     <Compile Include="Repositories\Realization\MedicamentRepository.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\PharmacyManager.Shared\PharmacyManager.Shared.csproj">
+      <Project>{359ed5bd-99a4-4e82-b6f5-9423fb1299d7}</Project>
+      <Name>PharmacyManager.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
