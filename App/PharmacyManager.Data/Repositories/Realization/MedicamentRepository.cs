@@ -3,7 +3,7 @@
     using PharmacyManager.Data.Repositories.Interfaces;
     using PharmacyManager.Shared.Entities;
 
-    public class MedicamentRepository : IUserRepository
+    public class MedicamentRepository : IMedicamentRepository
     {
         public void Delete(int id)
         {

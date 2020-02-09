@@ -1,0 +1,8 @@
+CREATE TABLE [dbo].[Medicaments]
+(
+	[Id] INT IDENTITY(1,1) NOT NULL,
+	[Name] NVARCHAR(50) NOT NULL,
+	[Description] VARBINARY(MAX) NOT NULL,
+	[Manufacturer] VARBINARY(100) NOT NULL,
+	PRIMARY KEY CLUSTERED([Id]ASC)
+);
