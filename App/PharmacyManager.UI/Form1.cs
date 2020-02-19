@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PharmacyManager.Business.Services.Realization;
+using PharmacyManager.Shared.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,18 @@ namespace PharmacyManager.UI
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var service = new MedicamentService();
+            var medicament = new Medicament
+            {
+                Name = "Жопазал",
+                Description = "Для жопы",
+                Manufacturer = "Хохляндия"
+            };
+            service.Save(medicament);
         }
     }
 }

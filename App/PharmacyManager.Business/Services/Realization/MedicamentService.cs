@@ -1,10 +1,12 @@
 ﻿using PharmacyManager.Business.Services.Interfaces;
+using PharmacyManager.Data.Context;
 using PharmacyManager.Shared.Entities;
 
 namespace PharmacyManager.Business.Services.Realization
 {
     public class MedicamentService : IMedicamentService
     {
+        private readonly PMContext _context = new PMContext();
         public MedicamentService()
         {
 
@@ -27,7 +29,7 @@ namespace PharmacyManager.Business.Services.Realization
 
         public void Save(Medicament obj)
         {
-            throw new System.NotImplementedException();
+            _context.Medicaments.Add(obj);
         }
     }
 }
