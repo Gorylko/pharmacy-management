@@ -146,6 +146,7 @@
     <Compile Include="Services\Interfaces\IMedicamentService.cs" />
     <Compile Include="Services\Interfaces\IService.cs" />
     <Compile Include="Services\Realization\MedicamentService.cs" />
+    <Compile Include="Services\Realization\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PharmacyManager.Data\PharmacyManager.Data.csproj">

@@ -1,10 +1,12 @@
-﻿namespace PharmacyManager.Business.Services.Interfaces
+﻿using System.Collections.Generic;
+
+namespace PharmacyManager.Business.Services.Interfaces
 {
     public interface IService<T>
     {
         T GetById(int id);
 
-        T GetAll();
+        IEnumerable<T> GetAll();
 
         void Save(T obj);
 

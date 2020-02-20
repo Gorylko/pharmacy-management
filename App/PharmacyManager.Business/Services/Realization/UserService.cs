@@ -6,36 +6,37 @@ using System.Collections.Generic;
 
 namespace PharmacyManager.Business.Services.Realization
 {
-    public class MedicamentService : IMedicamentService
+    class UserService : IService<User>
     {
         private readonly PMContext _context = new PMContext();
-        public MedicamentService()
+        public UserService()
         {
 
         }
 
-        public IEnumerable<Medicament> GetAll()
+
+        public IEnumerable<User> GetAll()
         {
-            return _context.Medicaments.AsQueryable();
+            return _context.AsQueryable();
         }
 
-        public Medicament GetById(int id)
+        public User GetById(int id)
         {
             return _context.Medicaments.Find(id);
         }
 
-        public void Save(Medicament obj)
+        public void Save(User obj)
         {
             _context.Medicaments.Add(obj);
         }
 
         public void Delete(int id)
         {
-            var medicament = _context.Find<Medicament>(id);
+            var medicament = _context.Find<User>(id);
             Delete(medicament);
         }
 
-        public void Delete(Medicament medicament)
+        public void Delete(User medicament)
         {
             if (_context.Entry(medicament).State == EntityState.Detached)
             {

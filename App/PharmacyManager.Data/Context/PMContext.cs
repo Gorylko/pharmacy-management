@@ -7,6 +7,8 @@ namespace PharmacyManager.Data.Context
     {
         public DbSet<Medicament> Medicaments { get; set; }
 
+        public DbSet<User> Users { get; set; }
+
         public PMContext()
         {
             Database.EnsureCreated();
