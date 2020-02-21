@@ -17,17 +17,18 @@ namespace PharmacyManager.Business.Services.Realization
 
         public IEnumerable<User> GetAll()
         {
-            return _context.AsQueryable();
+            return _context.Users.AsQueryable();
         }
 
         public User GetById(int id)
         {
-            return _context.Medicaments.Find(id);
+            return _context.Users.Find(id);
         }
 
         public void Save(User obj)
         {
-            _context.Medicaments.Add(obj);
+            _context.Users.Add(obj);
+            _context.SaveChanges();
         }
 
         public void Delete(int id)

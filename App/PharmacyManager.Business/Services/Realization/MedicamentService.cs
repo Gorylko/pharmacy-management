@@ -3,6 +3,7 @@ using PharmacyManager.Business.Services.Interfaces;
 using PharmacyManager.Data.Context;
 using PharmacyManager.Shared.Entities;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PharmacyManager.Business.Services.Realization
 {
@@ -16,7 +17,7 @@ namespace PharmacyManager.Business.Services.Realization
 
         public IEnumerable<Medicament> GetAll()
         {
-            return _context.Medicaments.AsQueryable();
+            return _context.Medicaments.ToList();
         }
 
         public Medicament GetById(int id)
@@ -27,6 +28,7 @@ namespace PharmacyManager.Business.Services.Realization
         public void Save(Medicament obj)
         {
             _context.Medicaments.Add(obj);
+            _context.SaveChanges();
         }
 
         public void Delete(int id)
