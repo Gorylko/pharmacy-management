@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace PharmacyManager.Business.Services.Realization
 {
-    class UserService : IService<User>
+    public class UserService : IUserService
     {
         private readonly PMContext _context = new PMContext();
         public UserService()
