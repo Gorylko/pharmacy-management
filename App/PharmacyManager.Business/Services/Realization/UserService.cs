@@ -3,6 +3,7 @@ using PharmacyManager.Business.Services.Interfaces;
 using PharmacyManager.Data.Context;
 using PharmacyManager.Shared.Entities;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PharmacyManager.Business.Services.Realization
 {
@@ -14,6 +15,12 @@ namespace PharmacyManager.Business.Services.Realization
 
         }
 
+        public User GetByCredentials(string login, string password)
+        {
+            return _context.Users
+                .FirstOrDefault(user => user.Login == login
+                             && user.Password == password);
+        }
 
         public IEnumerable<User> GetAll()
         {
