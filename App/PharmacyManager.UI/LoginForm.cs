@@ -1,5 +1,6 @@
 ﻿using PharmacyManager.Business.Services.Interfaces;
 using PharmacyManager.Business.Services.Realization;
+using PharmacyManager.Shared.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,9 +33,23 @@ namespace PharmacyManager.UI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var myUser = db.Users
-       .FirstOrDefault(u => u.Username == user.Username
-                    && u.Password == user.Password);
+            User currentUser = null;
+
+            if (this.IsRegister.Checked)
+            {
+                _userService.Save(new User
+                {
+                    Login = this.loginBox.Text,
+                    Password = this.passwordBox.Text,
+                    Role = Shared.Enums.RoleType.User
+                });
+            }
+
+            currentUser = _userService.GetByCredentials(this.loginBox.Text, this.passwordBox.Text);
+
+            this.Hide();
+            var mainMenu = new MainController(currentUser);
+            mainMenu.Show();
         }
     }
 }

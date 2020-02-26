@@ -9,6 +9,7 @@
         public BusinessRegistry()
         {
             For<IMedicamentService>().Use<MedicamentService>();
+            For<IUserService>().Use<UserService>();
         }
     }
 }

@@ -151,6 +151,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dependency\UIRegistry.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,11 +200,16 @@
       <Project>{8fc03d23-48cf-404b-adbc-d5404d4954c3}</Project>
       <Name>PharmacyManager.Business</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PharmacyManager.IoC\PharmacyManager.IoC.csproj">
+      <Project>{99787e22-c18b-48a7-a6ee-af0a2b96b6a1}</Project>
+      <Name>PharmacyManager.IoC</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PharmacyManager.Shared\PharmacyManager.Shared.csproj">
       <Project>{359ed5bd-99a4-4e82-b6f5-9423fb1299d7}</Project>
       <Name>PharmacyManager.Shared</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
