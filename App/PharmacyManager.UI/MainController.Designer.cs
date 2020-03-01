@@ -39,11 +39,12 @@
             this.MedicamentList.FormattingEnabled = true;
             this.MedicamentList.ItemHeight = 16;
             this.MedicamentList.Location = new System.Drawing.Point(16, 15);
-            this.MedicamentList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MedicamentList.Margin = new System.Windows.Forms.Padding(4);
             this.MedicamentList.Name = "MedicamentList";
             this.MedicamentList.Size = new System.Drawing.Size(725, 420);
             this.MedicamentList.TabIndex = 0;
             this.MedicamentList.SelectedIndexChanged += new System.EventHandler(this.MedicamentList_SelectedIndexChanged);
+            this.MedicamentList.DoubleClick += new System.EventHandler(this.MedicamentList_DoubleClick);
             // 
             // addMedButton
             // 
@@ -73,9 +74,11 @@
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.addMedButton);
             this.Controls.Add(this.MedicamentList);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainController";
             this.Text = "MainController";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainController_FormClosing);
+            this.Load += new System.EventHandler(this.MainController_Load);
             this.ResumeLayout(false);
 
         }

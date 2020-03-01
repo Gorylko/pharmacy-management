@@ -15,15 +15,15 @@ namespace PharmacyManager.UI
 {
     public partial class MedicamentAddForm : Form
     {
-        private readonly IMedicamentService _medicamentService = new MedicamentService();
-
+        private readonly IMedicamentService _medicamentService;
         private readonly Action _updateAction;
 
         public MedicamentAddForm(Action updateAction)
         {
             InitializeComponent();
 
-            _updateAction = updateAction ?? throw new ArgumentNullException(nameof(updateAction));
+            this._medicamentService = new MedicamentService();
+            this._updateAction = updateAction ?? throw new ArgumentNullException(nameof(updateAction));
         }
 
         private void Button2_Click(object sender, EventArgs e)

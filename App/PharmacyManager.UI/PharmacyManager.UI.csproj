@@ -170,8 +170,20 @@
     <Compile Include="MedicamentAddForm.Designer.cs">
       <DependentUpon>MedicamentAddForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MedicamentInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicamentInformationForm.Designer.cs">
+      <DependentUpon>MedicamentInformationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateMedicamentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateMedicamentForm.Designer.cs">
+      <DependentUpon>UpdateMedicamentForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MedicamentAddForm.resx">
       <DependentUpon>MedicamentAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicamentInformationForm.resx">
+      <DependentUpon>MedicamentInformationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -190,6 +205,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UpdateMedicamentForm.resx">
+      <DependentUpon>UpdateMedicamentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

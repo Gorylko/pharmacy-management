@@ -21,11 +21,12 @@ namespace PharmacyManager.UI
 
         public MainController(User user)
         {
-            this._medicamentService = = new MedicamentService();
+            this._medicamentService = new MedicamentService();
 
             InitializeComponent();
 
-            this._currentUser = user;
+            this._currentUser = user ?? throw new ArgumentNullException(nameof(user));
+
             this.MedicamentList.DataSource =_medicamentService.GetAll();
 
             InitializeByUserRole();
@@ -68,6 +69,30 @@ namespace PharmacyManager.UI
             {
                 this.addMedButton.Hide();
                 this.DeleteButton.Hide();
+            }
+        }
+
+        private void MedicamentList_DoubleClick(object sender, EventArgs e)
+        {
+            var medicament = (sender as ListBox).SelectedItem as Medicament;
+
+            var medicamentInfoForm = new MedicamentInformationForm(medicament);
+            medicamentInfoForm.Show();
+        }
+
+        private void MainController_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainController_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure want to exit?",
+                    "My First Application",
+                     MessageBoxButtons.OKCancel,
+                     MessageBoxIcon.Information) == DialogResult.OK)
+            {
+                Environment.Exit(1);
             }
         }
     }

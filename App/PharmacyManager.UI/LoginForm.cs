@@ -8,9 +8,12 @@ namespace PharmacyManager.UI
 {
     public partial class LoginForm : Form
     {
-        private readonly IUserService _userService = new UserService();
+        private readonly IUserService _userService;
+
         public LoginForm()
         {
+            this._userService = new UserService();
+
             InitializeComponent();
         }
 
