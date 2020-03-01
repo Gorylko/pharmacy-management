@@ -21,12 +21,7 @@ namespace PharmacyManager.UI
         public MainController(User user)
         {
             InitializeComponent();
-            _medicamentService.Save(new Shared.Entities.Medicament
-            {
-                Name = "Гагага",
-                Description = "dsdsd",
-                Manufacturer = "dsdasaa"
-            });
+
             this._currentUser = user;
             this.MedicamentList.DataSource =_medicamentService.GetAll();
         }
@@ -34,6 +29,17 @@ namespace PharmacyManager.UI
         private void MedicamentList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddMedButton_Click(object sender, EventArgs e)
+        {
+            var addMenu = new MedicamentAddForm();
+            addMenu.Show();
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            var medicament = (Medicament)this.MedicamentList.SelectedItem;
         }
     }
 }

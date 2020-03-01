@@ -164,6 +164,12 @@
     <Compile Include="MainController.Designer.cs">
       <DependentUpon>MainController.cs</DependentUpon>
     </Compile>
+    <Compile Include="MedicamentAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicamentAddForm.Designer.cs">
+      <DependentUpon>MedicamentAddForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="LoginForm.resx">
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainController.resx">
       <DependentUpon>MainController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicamentAddForm.resx">
+      <DependentUpon>MedicamentAddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
