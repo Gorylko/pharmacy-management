@@ -11,5 +11,7 @@ namespace PharmacyManager.Business.Services.Interfaces
         void Save(T obj);
 
         void Delete(int id);
+
+        void Delete(T obj);
     }
 }

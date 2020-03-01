@@ -39,7 +39,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(125, 276);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(307, 74);
             this.button1.TabIndex = 0;
@@ -50,19 +50,21 @@
             // loginBox
             // 
             this.loginBox.Location = new System.Drawing.Point(169, 139);
-            this.loginBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.loginBox.Margin = new System.Windows.Forms.Padding(4);
             this.loginBox.Name = "loginBox";
             this.loginBox.Size = new System.Drawing.Size(207, 22);
             this.loginBox.TabIndex = 1;
+            this.loginBox.Text = "Ded123";
             // 
             // passwordBox
             // 
             this.passwordBox.Location = new System.Drawing.Point(169, 187);
-            this.passwordBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.passwordBox.Margin = new System.Windows.Forms.Padding(4);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = 'ы';
             this.passwordBox.Size = new System.Drawing.Size(207, 22);
             this.passwordBox.TabIndex = 2;
+            this.passwordBox.Text = "123";
             this.passwordBox.UseWaitCursor = true;
             // 
             // label1
@@ -90,7 +92,7 @@
             // 
             this.IsRegister.AutoSize = true;
             this.IsRegister.Location = new System.Drawing.Point(189, 230);
-            this.IsRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IsRegister.Margin = new System.Windows.Forms.Padding(4);
             this.IsRegister.Name = "IsRegister";
             this.IsRegister.Size = new System.Drawing.Size(166, 21);
             this.IsRegister.TabIndex = 5;
@@ -109,7 +111,7 @@
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.loginBox);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.ResumeLayout(false);

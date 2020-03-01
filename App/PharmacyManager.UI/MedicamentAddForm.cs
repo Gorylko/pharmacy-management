@@ -17,13 +17,18 @@ namespace PharmacyManager.UI
     {
         private readonly IMedicamentService _medicamentService = new MedicamentService();
 
-        public MedicamentAddForm()
+        private readonly Action _updateAction;
+
+        public MedicamentAddForm(Action updateAction)
         {
             InitializeComponent();
+
+            _updateAction = updateAction ?? throw new ArgumentNullException(nameof(updateAction));
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
+            _updateAction();
             this.Close();
         }
 
@@ -33,6 +38,7 @@ namespace PharmacyManager.UI
 
             _medicamentService.Save(inputMedicament);
 
+            _updateAction();
             this.Close();
         }
 

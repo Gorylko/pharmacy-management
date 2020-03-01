@@ -44,7 +44,8 @@ namespace PharmacyManager.Business.Services.Realization
                 _context.Attach(medicament);
             }
 
-            _context.Remove(medicament);
+            _context.Medicaments.Remove(medicament);
+            _context.SaveChanges();
         }
     }
 }
